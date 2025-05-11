@@ -19,7 +19,7 @@ public class LinearSearch {
 	public static void main(String[] args) {
 		
 			int arr[] = {10,20,30,40,50,60};
-			int result = linearSearch(arr, 50);
+			int result = linearSearch(arr, 20);
 			
 			if (result == 0) {
 				System.out.println("Element are not found");
