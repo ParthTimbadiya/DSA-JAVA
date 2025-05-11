@@ -1,0 +1,25 @@
+package com.dsa;
+
+import java.util.Arrays;
+
+public class ReverseArray {
+	
+	public static int[] reverseElement(int[] arr) {
+		
+		for(int i = 0; i < arr.length; i++) {
+			for(int j = arr.length - 1; j < arr.length - i - 1; j--) {
+				arr[i] = arr[j];
+			}
+		}
+		
+		return arr;		
+	}
+	
+	public static void main(String[] args) {
+		int arr[] = {1,2,3,4,5};
+		int[] result = reverseElement(arr);
+		
+		System.out.println("Reverse Array : " + Arrays.toString(result));
+	}
+
+}
