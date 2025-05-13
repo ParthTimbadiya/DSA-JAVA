@@ -8,7 +8,7 @@ public class LinearSearch {
                 return arr[i];
             }
         }
-        return -1; 
+        return -1; // Return -1 if the target is not found
     }
 
     public static void main(String[] args) {
