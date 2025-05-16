@@ -17,22 +17,27 @@ public class LeftRotateArray {
 	}
 
 	public static int[] leftRotateArrayByGivenPosition(int arr[], int k) {
-		int n = arr.length;
-	    k = k % n;  
-	    
-	    int[] rotated = new int[n];
-	    
-	    
-	    for (int i = 0; i < n - k; i++) {
-	        rotated[i] = arr[i + k];
-	    }
-	    
-	    
-	    for (int i = 0; i < k; i++) {
-	        rotated[n - k + i] = arr[i];
-	    }
-	    
-	    return rotated;
+		int newArray[] = new int[k];
+
+		for (int i = 0; i < k; i++) {
+			newArray[i] = arr[i];
+		}
+		for (int i = k; i < arr.length - 1; i++) {
+			arr[i] = arr[i + 1];
+		}
+		int merge[] = new int[arr.length + newArray.length];
+
+		int i = 0, j = 0, l = 0;
+
+		while (i < arr.length) {
+			merge[l++] = arr[i++];
+		}
+
+		while (j < newArray.length) {
+			merge[l++] = newArray[j++];
+		}
+
+		return merge;
 	}
 
 	public static void main(String[] args) {
@@ -40,12 +45,8 @@ public class LeftRotateArray {
 		int[] leftRotateOnePosition = leftRotateOnePosition(arr);
 		System.out.println("left Rotate One Position : "+Arrays.toString(leftRotateOnePosition));
 		
-		
-		int[] rotatedArr = leftRotateArrayByGivenPosition(arr, 2);
-	    System.out.print("Rotated Array: ");
-	    for (int num : rotatedArr) {
-	        System.out.print(num + " ");
-	    }
+		int[] leftRotateArrayByGivenPosition = leftRotateArrayByGivenPosition(arr, 2);
+		System.out.println("left Rotate Array By Given Position: "+Arrays.toString(leftRotateArrayByGivenPosition));
 	}
 
 }

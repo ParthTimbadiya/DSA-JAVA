@@ -1,0 +1,25 @@
+package com.dsa;
+
+import java.util.Arrays;
+
+public class LeftRotateArray {
+	
+	public static int[] leftRotateOnePosition(int[] arr) {
+		int letf = arr[0];
+		
+		for(int i = 0; i < arr.length - 1; i++) {
+			arr[i] = arr[i+ 1];
+		}
+		
+		arr[arr.length - 1] = letf;
+		
+		return arr;
+	}
+	
+	public static void main(String[] args) {
+		int arr[] = {1,2,3,4,5};
+		int[] leftRotateOnePosition = leftRotateOnePosition(arr);
+		System.out.println(Arrays.toString(leftRotateOnePosition));
+	}
+
+}

@@ -40,8 +40,8 @@ public class LeftRotateArray {
 		int[] leftRotateOnePosition = leftRotateOnePosition(arr);
 		System.out.println("left Rotate One Position : "+Arrays.toString(leftRotateOnePosition));
 		
-		
-		int[] rotatedArr = leftRotateArrayByGivenPosition(arr, 2);
+		int[] rotatedArr = leftRotateArrayByGivenPosition(arr, k);
+	    
 	    System.out.print("Rotated Array: ");
 	    for (int num : rotatedArr) {
 	        System.out.print(num + " ");
