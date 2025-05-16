@@ -14,4 +14,5 @@
     <fullyQualifiedTypeName name="javax.swing.text.Highlighter.Highlight"/>
     <fullyQualifiedTypeName name="java.awt.HeadlessException"/>
     <fullyQualifiedTypeName name="com.dsa.BinarySearch"/>
+    <fullyQualifiedTypeName name="com.dsa.LinkedList"/>
 </qualifiedTypeNameHistroy>

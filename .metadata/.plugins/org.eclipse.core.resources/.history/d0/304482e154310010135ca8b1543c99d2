@@ -1,0 +1,17 @@
+package com.dsa.linkedList;
+
+public class LinkedList {
+	
+	public static void main(String[] args) {
+		
+		Node node1 = new Node(10);
+		System.out.println(node1.data);
+		System.out.println(node1.nextNode);
+		
+		Node node2 = new Node(20);
+		node1.nextNode = node2;
+		System.out.println(node1.nextNode.data);
+		
+	}
+
+}
