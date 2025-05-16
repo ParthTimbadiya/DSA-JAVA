@@ -1,0 +1,23 @@
+package com.dsa;
+
+import java.util.Arrays;
+
+public class RightRotateOne {
+	
+	public static int[] rightRotateOnePosition(int arr[]) {
+		int right = arr[arr.length - 1];
+		arr[0] = right;
+		for(int i = arr.length; i > 1; i--) {
+			arr[i] = arr[i - 1];
+		}
+		
+		return arr;
+	}
+	
+	public static void main(String[] args) {
+		int arr[] = {1,2,3,4,5};
+		int[] rightRotateOnePosition = rightRotateOnePosition(arr);
+		System.out.println(Arrays.toString(rightRotateOnePosition));
+	}
+
+}
