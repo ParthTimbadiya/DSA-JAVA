@@ -1,0 +1,30 @@
+package com.dsa.linkedList;
+
+public class SinglyList {
+	
+	class Node{
+		public int data;
+		public Node next;
+		
+		public Node(int data) {
+			this.data = data;
+			this.next = null;
+		}
+	}
+	
+	
+	Node head = null;
+	
+	public void insertBegin(int item) {
+		Node newNode = new Node(item);
+		if(head == null) {
+			head = newNode;
+			return;
+		}
+		
+		newNode.next = head;
+		head = newNode;
+		
+	}
+
+}

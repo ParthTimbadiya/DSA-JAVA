@@ -1,0 +1,20 @@
+package com.dsa.linkedList;
+
+public class Insertion {
+	
+	class Node{
+		public int data;
+		public Node nexNode;
+		
+		public Node(int data) {
+			this.data = data;
+			this.nexNode = null;
+			
+		}
+		
+		public static void main(String[] args) {
+			Node node = new Node(10);
+		}
+	}
+	
+}
