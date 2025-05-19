@@ -44,6 +44,10 @@ public class SinglyList {
 	
 	public void insertPosition(int item, int p) {
 		Node newNode = new Node(item);
+		if(p <= 0) {
+			System.out.println("Invalid Position!!");
+			return;
+		}
 		if(p == 1) {
 			newNode.next = head;
 			head = newNode;
@@ -68,6 +72,61 @@ public class SinglyList {
 		temp.next = newNode;
 	}
 	
+	public void deleteBegin() {
+		if(head != null) {
+			head = head.next;	
+			return;
+		}
+	}
+	
+	public void deleteEnd() {
+		Node temp = head;
+		if(temp.next == null) {
+			head = null;
+			return;
+		}
+		while(temp.next.next != null) {
+			temp = temp.next;	
+			if (temp.next.next == null) {
+				temp.next = null;	
+				return;
+			}
+		}
+		
+		
+	}
+	
+	public void deletePosition(int p) {
+		if(p <= 0) {
+			System.out.println("Invalid Position!! => It will be start 1");
+			return;
+		}
+		Node temp = head;
+		if(p == 1) {
+			if(head == null) {
+				System.out.println("List is Empty!!");
+				return;
+			}
+			head = head.next;
+			return;
+		}
+		
+		if(temp == null) {
+			System.out.println("Position invalid!!");
+			return;
+		}
+		for(int i = 1; i < p - 1; i++) {
+			temp = temp.next;
+		}
+		
+		if(temp == null || temp.next == null) {
+			System.out.println("Position out of Bound!!");
+			return;
+		}
+		
+		temp.next = temp.next.next;
+	}
+	
 	public void printList() {
 		Node temp = head;
 		while(temp != null) {
@@ -87,6 +146,38 @@ public class SinglyList {
 		sl.insertPosition(30, 3);
 		
 		sl.printList();
+		
+		
+//		sl.deleteBegin();
+//		sl.printList();
+//		
+//		sl.deleteEnd();
+//		sl.printList();
+//		
+//		sl.deleteEnd();
+//		sl.printList();
+//		
+//		sl.deleteBegin();
+//		sl.printList();
+//		
+//		sl.deleteEnd();
+//		sl.printList();
+//		
+//		sl.insertBegin(10);
+//		sl.printList();
+//		
+//		sl.deleteBegin();
+//		sl.printList();
+//		System.out.println("hii");
+//		
+//		sl.insertEnd(20);
+//		sl.deleteEnd();
+//		sl.printList();
+//		System.out.println("hello");
+		
+		sl.deletePosition(3);
+		sl.printList();
+		
 	}
 
 }
