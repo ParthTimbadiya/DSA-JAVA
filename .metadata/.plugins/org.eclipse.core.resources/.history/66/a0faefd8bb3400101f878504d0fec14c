@@ -199,11 +199,11 @@ public class SinglyList {
 		sl.deletePosition(3);
 		sl.printList();
 		
-		int searchItem = sl.search(1);
+		int searchItem = sl.search(0);
 		if (searchItem < 0) {
 			System.out.println("Position Out of Bound!!");
 		}else if (searchItem == 0) {
-			System.out.println("Position invalid!! => Position Will start 1");
+			System.out.println("Position invalid!!");
 		} else {
 			System.out.println(searchItem);
 		}

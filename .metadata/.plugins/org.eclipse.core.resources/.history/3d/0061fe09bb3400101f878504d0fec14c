@@ -129,9 +129,10 @@ public class SinglyList {
 	
 	public int search(int item) {
 		if(item <= 0) {
+			System.out.println("Position invalid!!");
 			return 0;
 		}
-			
+		
 		if(item == 1) {
 			return head.data;
 		}
@@ -199,12 +200,10 @@ public class SinglyList {
 		sl.deletePosition(3);
 		sl.printList();
 		
-		int searchItem = sl.search(1);
+		int searchItem = sl.search(0);
 		if (searchItem < 0) {
 			System.out.println("Position Out of Bound!!");
-		}else if (searchItem == 0) {
-			System.out.println("Position invalid!! => Position Will start 1");
-		} else {
+		}else {
 			System.out.println(searchItem);
 		}
 		

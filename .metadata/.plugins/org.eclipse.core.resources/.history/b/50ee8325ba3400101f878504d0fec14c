@@ -127,27 +127,6 @@ public class SinglyList {
 		temp.next = temp.next.next;
 	}
 	
-	public int search(int item) {
-		if(item <= 0) {
-			return 0;
-		}
-			
-		if(item == 1) {
-			return head.data;
-		}
-		
-		Node temp = head;
-		for(int i = 1; i < item; i++) {
-			if(temp == null || temp.next == null) {
-				return -1;
-			}
-			temp = temp.next;
-		}
-		
-		return temp.data;		
-		
-	}
-	
 	public void printList() {
 		Node temp = head;
 		while(temp != null) {
@@ -198,16 +177,6 @@ public class SinglyList {
 		
 		sl.deletePosition(3);
 		sl.printList();
-		
-		int searchItem = sl.search(1);
-		if (searchItem < 0) {
-			System.out.println("Position Out of Bound!!");
-		}else if (searchItem == 0) {
-			System.out.println("Position invalid!! => Position Will start 1");
-		} else {
-			System.out.println(searchItem);
-		}
-		
 		
 	}
 
