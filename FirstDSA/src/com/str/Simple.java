@@ -1,0 +1,10 @@
+package com.str;
+
+public class Simple {
+	
+	public static void main(String[] args) {
+		String string[] = {"parth", "Vishal"};
+		System.out.println(string[0]);
+	}
+
+}

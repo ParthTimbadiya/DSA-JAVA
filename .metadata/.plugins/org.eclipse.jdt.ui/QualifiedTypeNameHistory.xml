@@ -15,4 +15,7 @@
     <fullyQualifiedTypeName name="java.awt.HeadlessException"/>
     <fullyQualifiedTypeName name="com.dsa.BinarySearch"/>
     <fullyQualifiedTypeName name="com.dsa.LinkedList"/>
+    <fullyQualifiedTypeName name="com.dsa.linkedList.Node"/>
+    <fullyQualifiedTypeName name="javax.sound.midi.Soundbank"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
