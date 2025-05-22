@@ -1,7 +1,5 @@
 package com.dsa.linkedList;
 
-import java.util.Stack;
-
 public class SinglyList {
 	
 	class Node{
@@ -129,39 +127,25 @@ public class SinglyList {
 		temp.next = temp.next.next;
 	}
 	
-	
-//	SEARCH OPERATION
-	
-//	public int search(int item) {
-//		if(item <= 0) {
-//			return 0;
-//		}
-//			
-//		if(item == 1) {
-//			return head.data;
-//		}
-//		
-//		Node temp = head;
-//		for(int i = 1; i < item; i++) {
-//			if(temp == null || temp.next == null) {
-//				return -1;
-//			}
-//			temp = temp.next;
-//		}
-//		
-//		return temp.data;		
-//		
-//	}
-	
-	
-	public boolean searchData(int data) {
-		Node temp = head;
-		while(temp != null) {
-			if(temp.data == data) {
-				return true;
-			}
+	public int search(int item) {
+		if(item <= 0) {
+			return 0;
 		}
-		return false;
+			
+		if(item == 1) {
+			return head.data;
+		}
+		
+		Node temp = head;
+		for(int i = 1; i < item; i++) {
+			if(temp == null || temp.next == null) {
+				return -1;
+			}
+			temp = temp.next;
+		}
+		
+		return temp.data;		
+		
 	}
 	
 	public void printList() {
@@ -215,24 +199,15 @@ public class SinglyList {
 		sl.deletePosition(3);
 		sl.printList();
 		
-//		SEARCH OPERATION 
-		
-//		int searchItem = sl.search(1);
-//		if (searchItem < 0) {
-//			System.out.println("Position Out of Bound!!");
-//		}else if (searchItem == 0) {
-//			System.out.println("Position invalid!! => Position Will start 1");
-//		} else {
-//			System.out.println(searchItem);
-//		}
-		
-		
-		boolean searchData = sl.searchData(10);
-		if (searchData) {
-			System.out.println("Data is present in list");			
-		}else {
-			System.out.println("Data is not present in list.");
+		int searchItem = sl.search(1);
+		if (searchItem < 0) {
+			System.out.println("Position Out of Bound!!");
+		}else if (searchItem == 0) {
+			System.out.println("Position invalid!! => Position Will start 1");
+		} else {
+			System.out.println(searchItem);
 		}
+		
 		
 	}
 

@@ -1,7 +1,5 @@
 package com.dsa.linkedList;
 
-import java.util.Stack;
-
 public class SinglyList {
 	
 	class Node{

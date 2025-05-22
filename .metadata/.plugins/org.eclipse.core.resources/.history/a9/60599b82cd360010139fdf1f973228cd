@@ -1,7 +1,5 @@
 package com.dsa.linkedList;
 
-import java.util.Stack;
-
 public class SinglyList {
 	
 	class Node{
@@ -229,7 +227,7 @@ public class SinglyList {
 		
 		boolean searchData = sl.searchData(10);
 		if (searchData) {
-			System.out.println("Data is present in list");			
+			System.out.println(searchData + " is present in list");			
 		}else {
 			System.out.println("Data is not present in list.");
 		}

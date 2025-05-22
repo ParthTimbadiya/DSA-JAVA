@@ -1,7 +1,5 @@
 package com.dsa.linkedList;
 
-import java.util.Stack;
-
 public class SinglyList {
 	
 	class Node{
@@ -128,8 +126,6 @@ public class SinglyList {
 		
 		temp.next = temp.next.next;
 	}
-	
-	
 //	SEARCH OPERATION
 	
 //	public int search(int item) {
@@ -152,17 +148,6 @@ public class SinglyList {
 //		return temp.data;		
 //		
 //	}
-	
-	
-	public boolean searchData(int data) {
-		Node temp = head;
-		while(temp != null) {
-			if(temp.data == data) {
-				return true;
-			}
-		}
-		return false;
-	}
 	
 	public void printList() {
 		Node temp = head;
@@ -226,13 +211,6 @@ public class SinglyList {
 //			System.out.println(searchItem);
 //		}
 		
-		
-		boolean searchData = sl.searchData(10);
-		if (searchData) {
-			System.out.println("Data is present in list");			
-		}else {
-			System.out.println("Data is not present in list.");
-		}
 		
 	}
 
