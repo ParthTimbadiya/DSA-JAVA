@@ -84,34 +84,6 @@ public class DoublyLinkedList {
 		temp.next = newNode;
 	}
 	
-	public void deleteFront() {
-		if(head == null) {
-			System.out.println("List is Empty!!");
-			return;
-		}
-		
-		if (head.next == null) {
-			head = tail = null;			
-		}else {
-			head = head.next;
-			head.prev = null;
-		}
-	}
-	
-	public void deleteEnd() {
-		if (tail == null) {
-			System.out.println("List is Empty!!");			
-			return;
-		}
-		
-		if (tail.prev == null) {
-			head = tail = null;		
-		}else {
-			tail = tail.prev;
-			tail.next = null;
-		}
-	}
-	
 	
 	public void printList() {
 	    Node temp = head;

@@ -1,0 +1,31 @@
+package com.dsa.linkedList;
+
+public class CircularLinked {
+	
+	class Node{
+		int data;
+		Node prev;
+		Node next;
+		
+		public Node(int data){
+			this.data = data;
+			this.prev = null;
+			this.next = null;
+		}
+	}
+	
+	private Node head;
+	private Node tail;
+	
+	public CircularLinked(){
+		this.head = this.tail = null;
+	}
+	
+	public void insertStart(int item) {
+		Node newNode = new Node(item);
+	}
+	
+	
+	
+
+}
