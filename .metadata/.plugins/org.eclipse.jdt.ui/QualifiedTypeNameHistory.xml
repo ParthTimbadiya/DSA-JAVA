@@ -15,7 +15,12 @@
     <fullyQualifiedTypeName name="java.awt.HeadlessException"/>
     <fullyQualifiedTypeName name="com.dsa.BinarySearch"/>
     <fullyQualifiedTypeName name="com.dsa.LinkedList"/>
-    <fullyQualifiedTypeName name="com.dsa.linkedList.Node"/>
     <fullyQualifiedTypeName name="javax.sound.midi.Soundbank"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+    <fullyQualifiedTypeName name="com.dsa.linkedList.Node"/>
+    <fullyQualifiedTypeName name="javax.sql.rowset.JoinRowSet"/>
+    <fullyQualifiedTypeName name="com.dsa.linkedList.DoublyLinkedList"/>
+    <fullyQualifiedTypeName name="com.dsa.linkedList.DoublyLinkedList.Node"/>
 </qualifiedTypeNameHistroy>
