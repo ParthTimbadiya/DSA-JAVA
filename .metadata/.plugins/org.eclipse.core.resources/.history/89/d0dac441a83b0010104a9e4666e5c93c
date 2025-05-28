@@ -1,0 +1,88 @@
+package com.dsa.stack;
+
+public class StackwithLinkedList {
+	
+	class Node{
+		int data;
+		Node next;
+		
+		Node(int data){
+			this.data = data;
+			this.next = null;
+		}
+	}
+	
+	Node top;
+	public StackwithLinkedList() {
+		this.top = null;
+	}
+	
+	public void push(int data) {
+		Node newNode = new Node(data);
+		if (isEmpty()) {
+			top = newNode;
+			return;
+		}
+		
+		newNode.next = top;
+		top = newNode;
+		
+	}
+	
+	public void pop() {
+		if (isEmpty()) {
+			System.out.println("Stack is empty!!");			
+			return;
+		}
+		
+		System.out.println("Remove top element : " + top.data);
+		top = top.next;
+	}
+	
+	public void peek() {
+		if (isEmpty()) {
+			System.out.println("Stack is empty!!!");			
+			return;
+		}
+		
+		System.out.println("Top element of the stack : " + top.data);
+	}
+	
+	public boolean isEmpty() {
+		if (top == null) {	
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public void display() {
+		if (isEmpty()) {
+			System.out.println("Stack is empty!!");
+			return;
+		}
+		
+		Node temp = top;
+		while(temp != null) {
+			System.out.print(temp.data + " ");
+			temp = temp.next;
+		}
+		System.out.println();
+	}
+	
+	public static void main(String[] args) {
+		StackwithLinkedList sl = new StackwithLinkedList();
+		
+		sl.push(10);
+		sl.push(20);
+		sl.push(30);
+		sl.push(40);
+		sl.push(50);
+		sl.push(60);
+		sl.display();
+		
+		sl.pop();
+		sl.display();
+	}
+
+}

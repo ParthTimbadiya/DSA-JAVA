@@ -1,0 +1,50 @@
+package com.dsa.stack;
+
+public class StackwithLinkedList {
+	
+	class Node{
+		int data;
+		Node next;
+		
+		Node(int data){
+			this.data = data;
+			this.next = null;
+		}
+	}
+	
+	Node top;
+	public StackwithLinkedList() {
+		this.top = null;
+	}
+	
+	public void push(int data) {
+		Node newNode = new Node(data);
+		if (isEmpty()) {
+			top = newNode;
+			return;
+		}
+		
+		newNode.next = top;
+		top = newNode;
+		
+	}
+	
+	public void pop() {
+		if (isEmpty()) {
+			System.out.println("Stack is empty!!");			
+			return;
+		}
+		
+		System.out.println("Remove top element : " + top.data);
+		top = top.next;
+	}
+	
+	public boolean isEmpty() {
+		if (top == null) {	
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+}
