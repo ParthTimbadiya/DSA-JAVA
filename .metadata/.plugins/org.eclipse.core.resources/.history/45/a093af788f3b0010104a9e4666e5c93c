@@ -1,0 +1,47 @@
+package com.dsa.stack;
+
+public class StackwithArray {
+
+	public int arr[];
+	public int size;
+	public int top;
+
+	public StackwithArray(int size) {
+		this.size = size;
+		this.arr = new int[size];
+		this.top = -1;
+	}
+	
+	public void push(int data) {
+		if (top == size - 1) {
+			System.out.println("Stack is full!!");			
+			return;
+		}
+		top++;
+		arr[top] = data;
+	}
+	
+	public void display() {
+		if (top == -1) {
+			System.out.println("Stack is empty!!");			
+			return;
+		}
+		while(top != -1) {
+			System.out.print(arr[top] + " ");			
+			top--;
+		}
+		System.out.println();
+	}
+	
+	public static void main(String[] args) {
+		StackwithArray sa = new StackwithArray(5);
+		sa.push(10);
+		sa.push(20);
+		sa.push(30);
+		sa.push(40);
+		sa.push(50);
+		
+		sa.display();
+	}
+
+}

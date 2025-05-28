@@ -1,0 +1,15 @@
+package com.dsa.stack;
+
+public class StackwithArray {
+
+	public int arr[];
+	public int size;
+	public int top;
+
+	public StackwithArray(int size) {
+		this.size = size;
+		this.arr = new int[size];
+		this.top = -1;
+	}
+
+}
