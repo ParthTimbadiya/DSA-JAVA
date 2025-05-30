@@ -1,0 +1,62 @@
+package com.dsa.queue;import java.util.Iterator;
+
+import javax.swing.text.StyledEditorKit.ForegroundAction;
+
+public class SimpleQueue {
+	
+	private int queue[];
+	private int size;
+	private int front;
+	private int rear;
+	
+	public SimpleQueue(int size) {
+		this.size = size;
+		this.queue = new int[size];
+		this.front = 0;
+		this.rear = -1;
+		
+	}
+	
+//	insert rear : Enqueue
+	
+	public void enqueue(int data) {
+		if (rear == size - 1) {
+			System.out.println("Queue is full!");			
+			return;
+		}
+		rear++;
+		queue[rear] = data;
+	}
+	
+//	delete front - Dequeue
+	
+	public void dequeue() {
+		if (front > rear) {
+			System.out.println("Queue is empty!!");			
+			return;
+		}
+		System.out.println("Delete element : " + queue[front]);
+		front++;
+	}
+	
+	public void peek() {
+		if (front > rear) {
+			System.out.println("Queue is empty!!");			
+			return;
+		}
+		System.out.println("First element of queue : " + queue[front]);
+	}
+	
+	public void display() {
+		if(front > rear) {
+			System.out.println("Queue is empty!!");
+			return;
+		}
+		
+		for(int i = front; i <= rear; i++) {
+			System.out.print(queue[i] + " ");
+		}
+		System.out.println();
+	}
+
+}
