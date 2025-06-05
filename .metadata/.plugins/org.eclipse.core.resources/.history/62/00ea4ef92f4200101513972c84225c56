@@ -1,4 +1,4 @@
-** BINARY SEARCH -- O(n)  **
+** BINARY SEARCH **
 
 1) while(low <= high)
 2) mid = (low + high) / 2
@@ -12,7 +12,7 @@ exit.
 
 
 
-** BUBBLE SORT -- O(log n)  **
+** BUBBLE SORT **
 
 1) for (i = 0; i < arr.length; i++)
 2)		for(j = 0; j < arr.length - i - 2)

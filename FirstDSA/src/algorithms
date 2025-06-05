@@ -1,4 +1,4 @@
-** BINARY SEARCH **
+** BINARY SEARCH -- O(n)  **
 
 1) while(low <= high)
 2) mid = (low + high) / 2
@@ -9,3 +9,12 @@
 5) else
 	high = mid - 1
 exit.
+
+
+
+** BUBBLE SORT -- O(log n)  **
+
+1) for (i = 0; i < arr.length; i++)
+2)		for(j = 0; j < arr.length - i - 2)
+3)			if arr[i] > arr[j + 1]
+				swap (arr[i] and arr[j + 1])

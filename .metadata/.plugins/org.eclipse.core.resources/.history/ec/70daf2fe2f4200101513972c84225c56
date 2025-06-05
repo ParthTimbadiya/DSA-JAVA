@@ -12,7 +12,7 @@ exit.
 
 
 
-** BUBBLE SORT -- O(log n)  **
+** BUBBLE SORT O(log n)  **
 
 1) for (i = 0; i < arr.length; i++)
 2)		for(j = 0; j < arr.length - i - 2)
