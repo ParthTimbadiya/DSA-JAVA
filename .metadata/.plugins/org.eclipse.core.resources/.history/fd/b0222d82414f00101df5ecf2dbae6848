@@ -1,0 +1,20 @@
+package com.dsa.stack;
+
+public class MatchingParenthesis {
+	
+	public static boolean isExpressionBalanced(String expression) {
+		
+		return false;
+	}
+	
+	public static boolean isMatchingPair(char open, char close) {
+		if (open == '(' && close == ')') {
+			return true;			
+		}else if (open == '{' && close == '}') {
+			return true;			
+		}else {
+			return open == '[' && close == ']';
+		}
+	}
+
+}

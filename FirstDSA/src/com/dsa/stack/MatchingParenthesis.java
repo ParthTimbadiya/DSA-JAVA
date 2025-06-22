@@ -1,0 +1,42 @@
+package com.dsa.stack;
+
+public class MatchingParenthesis {
+	
+	public static boolean isExpressionBalanced(String expression) {
+		
+		StackwithArray stack = new StackwithArray(expression.length());
+		
+		for(int i = 0; i < expression.length(); i++) {
+			char ch = expression.charAt(i);
+			
+			if (ch == '(' || ch == '{' || ch == '[') {
+				stack.push(ch);				
+			}else if (ch == ')' || ch == '}' || ch == ']') {
+				if (stack.isEmpty()) {
+					return false;					
+				}				
+				
+				char pop = (char) stack.pop();
+				if (!isMatchingPair(pop,ch)) {
+					return false;					
+				}
+			}
+		}
+		return stack.isEmpty();
+	}
+	
+	public static boolean isMatchingPair(char open, char close) {
+		if (open == '(' && close == ')') {
+			return true;			
+		}else if (open == '{' && close == '}') {
+			return true;			
+		}else {
+			return open == '[' && close == ']';
+		}
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(isExpressionBalanced("[{(})]"));
+	}
+
+}
