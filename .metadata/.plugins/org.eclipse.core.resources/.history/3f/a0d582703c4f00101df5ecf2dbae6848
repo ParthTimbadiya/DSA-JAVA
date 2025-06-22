@@ -22,15 +22,14 @@ public class StackwithArray {
 		arr[top] = data;
 	}
 
-	public int pop() {
+	public void pop() {
 		if (top == -1) {
 			System.out.println("Stack is empty!!");
-			return -1;
+			return;
 		}
-		int last =  arr[top];
+		System.out.println("Delete element : " + arr[top]);
 		top--;
-		
-		return last;
+
 	}
 	
 	public void peek() {
@@ -66,8 +65,7 @@ public class StackwithArray {
 
 		sa.display();
 		
-		int pop = sa.pop();
-		System.out.println("Delete element :" + pop);
+		sa.pop();
 		sa.display();
 		
 		sa.peek();

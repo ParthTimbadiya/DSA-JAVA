@@ -66,8 +66,7 @@ public class StackwithArray {
 
 		sa.display();
 		
-		int pop = sa.pop();
-		System.out.println("Delete element :" + pop);
+		sa.pop();
 		sa.display();
 		
 		sa.peek();
