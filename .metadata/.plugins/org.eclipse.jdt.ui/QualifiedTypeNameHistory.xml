@@ -15,7 +15,6 @@
     <fullyQualifiedTypeName name="com.dsa.BinarySearch"/>
     <fullyQualifiedTypeName name="com.dsa.LinkedList"/>
     <fullyQualifiedTypeName name="javax.sound.midi.Soundbank"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.util.Stack"/>
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
     <fullyQualifiedTypeName name="com.dsa.linkedList.DoublyLinkedList"/>
@@ -28,4 +27,10 @@
     <fullyQualifiedTypeName name="javax.swing.plaf.SliderUI"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.dsa.stack.MatchingParenthesis"/>
+    <fullyQualifiedTypeName name="com.dsa.stack.StackwithArray"/>
+    <fullyQualifiedTypeName name="java.lang.Character"/>
 </qualifiedTypeNameHistroy>
